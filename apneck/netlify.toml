@@ -1,0 +1,8 @@
+[build]
+  publish = "dist" # Change this to your build output directory
+  command = "yarn build" # Change this to your build command for Vite
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
