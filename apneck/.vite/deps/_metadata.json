@@ -1,0 +1,149 @@
+{
+  "hash": "1dd4c0ae",
+  "browserHash": "42939329",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "6006b2bf",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "57d7dabb",
+      "needsInterop": true
+    },
+    "react-redux": {
+      "src": "../../node_modules/react-redux/es/index.js",
+      "file": "react-redux.js",
+      "fileHash": "d6fcfb21",
+      "needsInterop": false
+    },
+    "@reduxjs/toolkit": {
+      "src": "../../node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js",
+      "file": "@reduxjs_toolkit.js",
+      "fileHash": "4ae83f54",
+      "needsInterop": false
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "b392afed",
+      "needsInterop": false
+    },
+    "axios": {
+      "src": "../../node_modules/axios/index.js",
+      "file": "axios.js",
+      "fileHash": "90693227",
+      "needsInterop": false
+    },
+    "prop-types": {
+      "src": "../../node_modules/prop-types/index.js",
+      "file": "prop-types.js",
+      "fileHash": "2313d6d6",
+      "needsInterop": true
+    },
+    "react-hot-toast": {
+      "src": "../../node_modules/react-hot-toast/dist/index.mjs",
+      "file": "react-hot-toast.js",
+      "fileHash": "7cf86aa0",
+      "needsInterop": false
+    },
+    "sweetalert2": {
+      "src": "../../node_modules/sweetalert2/dist/sweetalert2.all.js",
+      "file": "sweetalert2.js",
+      "fileHash": "207226db",
+      "needsInterop": true
+    },
+    "antd": {
+      "src": "../../node_modules/antd/es/index.js",
+      "file": "antd.js",
+      "fileHash": "e7725690",
+      "needsInterop": false
+    },
+    "react-toastify": {
+      "src": "../../node_modules/react-toastify/dist/react-toastify.esm.mjs",
+      "file": "react-toastify.js",
+      "fileHash": "a0d3e4c4",
+      "needsInterop": false
+    },
+    "flutterwave-react-v3": {
+      "src": "../../node_modules/flutterwave-react-v3/dist/index.es.js",
+      "file": "flutterwave-react-v3.js",
+      "fileHash": "413af6db",
+      "needsInterop": false
+    },
+    "react-icons/ai": {
+      "src": "../../node_modules/react-icons/ai/index.esm.js",
+      "file": "react-icons_ai.js",
+      "fileHash": "f05ff362",
+      "needsInterop": false
+    },
+    "react-icons/bs": {
+      "src": "../../node_modules/react-icons/bs/index.esm.js",
+      "file": "react-icons_bs.js",
+      "fileHash": "0718a400",
+      "needsInterop": false
+    },
+    "react-spinners/ClipLoader": {
+      "src": "../../node_modules/react-spinners/ClipLoader.js",
+      "file": "react-spinners_ClipLoader.js",
+      "fileHash": "d69c2d98",
+      "needsInterop": true
+    },
+    "react-icons/bi": {
+      "src": "../../node_modules/react-icons/bi/index.esm.js",
+      "file": "react-icons_bi.js",
+      "fileHash": "f7083495",
+      "needsInterop": false
+    },
+    "react-icons/fa": {
+      "src": "../../node_modules/react-icons/fa/index.esm.js",
+      "file": "react-icons_fa.js",
+      "fileHash": "ec5448ff",
+      "needsInterop": false
+    },
+    "react-slick": {
+      "src": "../../node_modules/react-slick/lib/index.js",
+      "file": "react-slick.js",
+      "fileHash": "8ca14dc1",
+      "needsInterop": true
+    },
+    "react-rating-stars-component": {
+      "src": "../../node_modules/react-rating-stars-component/dist/react-stars.js",
+      "file": "react-rating-stars-component.js",
+      "fileHash": "50946da4",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-WF6ZKFNH": {
+      "file": "chunk-WF6ZKFNH.js"
+    },
+    "chunk-ZVAM7HF2": {
+      "file": "chunk-ZVAM7HF2.js"
+    },
+    "chunk-T4MTQRGO": {
+      "file": "chunk-T4MTQRGO.js"
+    },
+    "chunk-OTY6O57J": {
+      "file": "chunk-OTY6O57J.js"
+    },
+    "chunk-5SMMSEZO": {
+      "file": "chunk-5SMMSEZO.js"
+    },
+    "chunk-QEVNLIYD": {
+      "file": "chunk-QEVNLIYD.js"
+    },
+    "chunk-KEE3L4NC": {
+      "file": "chunk-KEE3L4NC.js"
+    },
+    "chunk-2PA4WPI3": {
+      "file": "chunk-2PA4WPI3.js"
+    },
+    "chunk-ROME4SDB": {
+      "file": "chunk-ROME4SDB.js"
+    }
+  }
+}
