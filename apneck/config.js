@@ -1,3 +1,3 @@
-const apiBaseUrl = "http://localhost:5000/api"; // Your API base URL
+const apiBaseUrl = "https://marketshare-dwux.onrender.com"; // Your API base URL
 
 export { apiBaseUrl };
