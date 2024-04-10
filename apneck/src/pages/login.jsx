@@ -139,10 +139,10 @@ const Login = () => {
               />
             </div>
 
-            <div className="mb-1 max-w-md flex px-3  items-center   border rounded">
+            <div className="mb-1 max-w-md flex px-3  items-center   border border-black rounded">
               <input
                 type={showPassword ? "text" : "password"}
-                className="w-full md:text-sm text-xs md:font-bold font-medium text-[#131313] px-3 py-3 border border-black rounded focus:outline-none "
+                className="w-full md:text-sm text-xs md:font-bold font-medium text-[#131313] px-3 py-3  border-none rounded focus:outline-none "
                 name="Password"
                 id="password"
                 placeholder="Password"

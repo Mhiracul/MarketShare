@@ -203,7 +203,7 @@ const SubTotal = ({ totalAmount, currency, onCheckout }) => {
   };
   return (
     <div className="bg-white col-span-12 xl:col-span-4 lg:h-1/2 md:h-full h-full mb-3">
-      <div className="p-3 bg-white">
+      <div className="p-1 bg-white">
         <h1 className="text-2xl font-bold text-black uppercase">Checkout</h1>
         <div className="flex flex-col gap-4 mt-4">
           <div className="flex items-center justify-between">

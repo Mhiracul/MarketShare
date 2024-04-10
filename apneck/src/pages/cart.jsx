@@ -334,20 +334,20 @@ const Cart = (props) => {
       <ToastContainer />
 
       <section className="  w-full">
-        <div className="container mx-auto px-10">
+        <div className="container mx-auto md:px-2 px-4">
           <div className="">
             <div className=" text-left">
               <div className="">
-                <h1 className="text-black mt-2">
-                  <b className="text-2xl text-[#373737]">Cart</b>
+                <h1 className="text-black md:px-4 px-2 mt-2">
+                  <b className="text-2xl  text-[#373737]">Cart</b>
                 </h1>
               </div>
             </div>
           </div>
 
           <div className="grid grid-cols-12 gap-4 py-2 md:mt-6 md:gap-6 2xl:mt-[1.875rem] 2xl:gap-[1.875rem] mx-auto md:px-20 px-2 ">
-            <section className="cart bg-[#FFFFFF]  col-span-12 xl:col-span-8 ">
-              <div className="container-xxl p-5">
+            <section className=" bg-[#FFFFFF] w-full  col-span-12 xl:col-span-8 ">
+              <div className=" p-1">
                 {cart && cart.length > 0 ? (
                   <div className="row border ">
                     <div className="table-responsive">

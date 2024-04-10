@@ -191,21 +191,15 @@ const Header = () => {
           >
             <Link
               to="/cart"
-              className="text-black cursor-pointer font-Montserrat text-[12px]"
+              className="text-black cursor-pointer font-Montserrat text-[12px] relative flex items-center"
             >
               <HiShoppingCart color="#727272" size={18} />
-              Cart
-              <div>
-                <div>
-                  <b>
-                    <div className="absolute top-0 right-[17.5rem]">
-                      <div className="bg-[#b50000] rounded-full p-2 relative">
-                        <div className="text-white absolute inset-0 flex items-center text-xs font-normal  justify-center">
-                          {totalProductsInCart}
-                        </div>
-                      </div>
-                    </div>
-                  </b>
+              <span>Cart</span>
+              <div className="-top-2 absolute">
+                <div className="ml-2 bg-[#b50000] rounded-full px-1 py-0 relative">
+                  <span className="text-white flex items-center justify-center text-xs font-normal">
+                    {totalProductsInCart}
+                  </span>
                 </div>
               </div>
             </Link>
