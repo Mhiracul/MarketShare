@@ -131,20 +131,12 @@ const Header = () => {
                     <Link
                       onClick={toggleMenu}
                       to="/cart"
-                      className="text-black cursor-pointer font-Montserrat text-[12px] relative"
+                      className="text-black flex gap-1  items-center cursor-pointer font-Montserrat text-[12px]"
                     >
                       Cart
-                      <div>
-                        <div>
-                          <b>
-                            <div className="absolute -top-2 -right-6">
-                              <div className="bg-[#b50000] rounded-full p-2.5 relative">
-                                <div className="text-white absolute inset-0 flex items-center text-xs font-normal  justify-center">
-                                  {totalProductsInCart}
-                                </div>
-                              </div>
-                            </div>
-                          </b>
+                      <div className="bg-[#b50000] rounded-full px-1.5 py-0.5 ">
+                        <div className="text-white  flex  text-xs font-normal  justify-center">
+                          {totalProductsInCart}
                         </div>
                       </div>
                     </Link>
