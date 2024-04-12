@@ -1,6 +1,6 @@
 import Banner from "../components/Banner";
+import ByCategories from "../components/ByCategories";
 import Categories from "../components/Categories";
-import FeaturedCategories from "../components/FeaturedCategory";
 import TopProduct from "../components/TopProduct";
 import Footer from "../components/footer";
 import Header from "../components/header";
@@ -14,7 +14,7 @@ const Homes = () => {
       <Shops />
       <Categories />
       <TopProduct />
-      <FeaturedCategories />
+      <ByCategories />
       <Footer />
     </div>
   );

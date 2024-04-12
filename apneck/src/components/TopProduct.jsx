@@ -26,7 +26,7 @@ const TopProduct = () => {
   return (
     <div className="w-full h-full">
       <div className="container mx-auto px-10">
-        <h1 className="font-bold text-2xl text-black">TOP PRODUTS</h1>
+        <h1 className="font-bold text-xl text-black">TOP PRODUTS</h1>
 
         <div className=" flex py-4 overflow-x-auto  w-full gap-10">
           {products.map((product) => (

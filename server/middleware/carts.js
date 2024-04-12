@@ -8,6 +8,7 @@ const productModel = require("../models/product");
 const marketShareBank = require("../models/bank");
 const marketShareVendor = require("../models/vendor");
 const products = require("../models/product");
+const Iaddress = require("../models/address");
 
 router.post("/user/post/cart", authenticateToken, async (req, res, next) => {
   try {
@@ -290,7 +291,26 @@ router.get("/user/find/all_vendors_with_products", async (req, res, next) => {
     res.status(500).json({ error: error.message });
   }
 });
-
+const getAllAddresses = async () => {
+  try {
+    // Use the find() method to retrieve all addresses
+    const addresses = await Iaddress.find();
+    return addresses;
+  } catch (error) {
+    // Handle error
+    console.error("Error fetching addresses:", error);
+    throw error; // Rethrow the error to be caught by the caller
+  }
+};
+router.get("/address", async (req, res) => {
+  try {
+    // Call the function to get all addresses
+    const addresses = await getAllAddresses();
+    res.json(addresses);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch addresses" });
+  }
+});
 // ...
 
 module.exports = router;
