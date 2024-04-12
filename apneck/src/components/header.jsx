@@ -151,7 +151,7 @@ const Header = () => {
                   </div>
 
                   <Link
-                    href="Orders"
+                    to="/order"
                     className="text-black cursor-pointer font-Montserrat text-[12px]"
                   >
                     Orders
@@ -165,7 +165,7 @@ const Header = () => {
                     </Link>
                   ) : (
                     <Link
-                      to="login"
+                      to="/login"
                       className="text-black cursor-pointer font-Montserrat text-[12px]"
                     >
                       Account
@@ -212,7 +212,7 @@ const Header = () => {
             Orders
           </Link>
           <Link
-            to="/Login"
+            to="/login"
             className="text-black flex flex-col items-center  cursor-pointer font-Montserrat text-[12px]"
           >
             <FaUser color="#727272" size={18} />

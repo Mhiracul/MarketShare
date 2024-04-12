@@ -135,7 +135,7 @@ const Order = () => {
           <h1 className="text-xl font-bold  mb-8 text-wrap text-black uppercase">
             Orders
           </h1>{" "}
-          <div>
+          <div className="overflow-x-auto">
             <Tab.Group>
               <Tab.List className="flex space-x-4 text-black">
                 <Tab
