@@ -6,16 +6,26 @@ import { ToastContainer, toast } from "react-toastify";
 import { ShopContext } from "./shopcontext";
 import { useSelector } from "react-redux";
 import { AiFillEye, AiOutlineShoppingCart } from "react-icons/ai";
-import { IoFilter } from "react-icons/io5";
+import { IoCartSharp, IoFilter } from "react-icons/io5";
 import Dropdown from "react-dropdown";
+import { Modal } from "antd";
+
 import "react-dropdown/style.css";
 const ByCategories = () => {
   const [products, setProducts] = useState([]);
-  const { viewProductDetails, cartItems, addToCart } = useContext(ShopContext);
+  const { cartItems, addToCart } = useContext(ShopContext);
   const user = useSelector((state) => state.user);
   const accessToken = localStorage.getItem("token");
   const [sortBy, setSortBy] = useState("");
-  const [displayedProducts, setDisplayedProducts] = useState(12); // Initial number of displayed products
+  const [displayedProducts, setDisplayedProducts] = useState(12);
+  const [modalVisible, setModalVisible] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [quantity, setQuantity] = useState(1);
+
+  const openModal = (product) => {
+    setSelectedProduct(product);
+    setModalVisible(true);
+  };
 
   const addToCartServer = async (productId) => {
     try {
@@ -119,6 +129,15 @@ const ByCategories = () => {
   const loadMoreProducts = () => {
     setDisplayedProducts((prev) => prev + 12); // Increase the number of displayed products by 4
   };
+  const increaseQuantity = () => {
+    setQuantity((prevQuantity) => prevQuantity + 1);
+  };
+
+  const decreaseQuantity = () => {
+    if (quantity > 1) {
+      setQuantity((prevQuantity) => prevQuantity - 1);
+    }
+  };
 
   return (
     <div>
@@ -175,19 +194,13 @@ const ByCategories = () => {
                       </div>
                     </div>
                     <div className="inline-flex gap-2  items-center justify-center">
-                      <Link
-                        to="/details"
-                        onClick={() => viewProductDetails(product._id)}
+                      <button
+                        className="bg-[#008605] text-white p-1 rounded-none shadow-md"
+                        onClick={() => openModal(product)}
                       >
-                        <p>
-                          <button
-                            className="bg-[#008605] text-white p-1 rounded-none shadow-md"
-                            id="clear-cart"
-                          >
-                            <AiFillEye size={15} />
-                          </button>
-                        </p>
-                      </Link>
+                        <AiFillEye size={15} />
+                      </button>
+
                       <div className="flex justify-center">
                         <button
                           onClick={() => {
@@ -208,6 +221,50 @@ const ByCategories = () => {
                 </Link>
               </div>
             ))}
+
+            <Modal
+              title={selectedProduct ? selectedProduct.ProductName : ""}
+              visible={modalVisible}
+              onCancel={() => setModalVisible(false)}
+              footer={null}
+            >
+              {selectedProduct && (
+                <div className="flex md:flex-row flex-col gap-10">
+                  <img
+                    className=""
+                    src={selectedProduct.ProductImage}
+                    alt="Product"
+                  />
+                  <div className="flex flex-col gap-2">
+                    <h1 className="text-2xl font-bold ">
+                      {selectedProduct.ProductName}
+                    </h1>
+                    <p className="text-sm font-medium">
+                      {selectedProduct.ProductDesc}
+                    </p>
+                    <p className="text-sm font-medium">
+                      {selectedProduct.ProductPrice}
+                    </p>
+                    <div className="flex gap-2 items-center">
+                      <button className="border" onClick={decreaseQuantity}>
+                        -
+                      </button>
+                      <span>{quantity}</span>
+                      <button className="border" onClick={increaseQuantity}>
+                        +
+                      </button>
+                    </div>
+                    <button
+                      className="bg-black mt-4 flex items-center gap-2 justify-center text-white cursor-pointer "
+                      onClick={() => addToCartServer(selectedProduct._id, 1)}
+                    >
+                      <IoCartSharp />
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              )}
+            </Modal>
           </div>
         </div>
 
